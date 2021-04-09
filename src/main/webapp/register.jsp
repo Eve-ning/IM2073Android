@@ -9,8 +9,7 @@
     <div class="jumbotron">
         <h1>User <%=(boolean)(request.getAttribute("success")) ? "Successfully" : "Not"%> Added</h1>
         <p><%=request.getParameter("username")%>,
-           <%=request.getParameter("password")%>,
-           <%=request.getParameter("isAdmin")%>
+           <%=request.getParameter("password")%>
         </p>
     </div>
 </div>
