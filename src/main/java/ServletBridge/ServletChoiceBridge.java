@@ -28,7 +28,7 @@ public class ServletChoiceBridge {
         }
 
         try {
-            Choice c = new Choice(Integer.parseInt(userId), choice, Integer.parseInt(qNo));
+            Choice c = new Choice(Integer.parseInt(userId), choice.toUpperCase(), Integer.parseInt(qNo));
             dbHandler.insertInto(c);
         } catch (NumberFormatException | SQLException exception) {
             dbHandler.closeConnection();
