@@ -11,10 +11,11 @@ import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 
-@WebServlet(name = "Servlets.ServletRegister", value = "/ServletRegister")
+@WebServlet(name = "Servlets.ServletRegister", value = "/register")
 public class ServletRegister extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setAttribute("success", false);
         try {
             boolean status = ServletRegisterBridge.addCredential(
                     request.getParameter("username"),
